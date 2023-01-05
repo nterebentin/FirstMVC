@@ -1,0 +1,25 @@
+﻿@using FirstMVC
+@model IEnumerable<Artist>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Here is the list of Artists</h2>
+<table style="width:50%">
+    <thead>
+        <tr>
+            <th>ArtistId</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Artist e in Model)
+        {
+            <tr>
+                <td>@e.ArtistId</td>
+                <td>@e.Name</td>
+                <td><a asp-action="AlbumByArtist" asp-route-empname="@e.ArtistId">Detay</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

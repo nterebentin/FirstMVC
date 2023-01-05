@@ -1,0 +1,20 @@
+﻿@using FirstMVC
+
+  
+@model Artist
+@{
+    ViewData["Title"] = "Create";
+}
+<a asp-action="Index">View All Artists</a>  
+<h2>Create</h2>
+<form method="post">
+    <p>
+        <label asp-for="Name">Artist Name:</label>
+        <input asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="Albums">Artist Album:</label>
+        <input asp-for="Albums" />
+    </p>
+    <p><button type="submit">Submit</button></p>
+</form>
